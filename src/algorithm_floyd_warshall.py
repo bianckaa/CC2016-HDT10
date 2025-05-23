@@ -1,3 +1,14 @@
+"""
+Universidad del Valle de Guatemala
+Algoritmos y Estructuras de Datos - Seccion 31
+Hoja de Trabajo 10
+Biancka Raxón 24960
+
+Descripción:
+Implementación del algoritmo de Floyd-Warshall usando NetworkX
+
+"""
+
 import networkx as nx
 
 # Crear grafo
@@ -37,6 +48,16 @@ for from_city in cities:
 
 # Encontrar el centro del grafo 
 def find_graph_center(distance_matrix, nodes):
+    """
+    Encuentra el centro del grafo, es decir, la ciudad con la menor distancia máxima hacia otras.
+
+    Parámetros:
+        distance_matrix (dict): Diccionario con las distancias más cortas entre nodos.
+        nodes (list): Lista de nombres de los nodos (ciudades).
+
+    Retorna:
+        str: El nombre de la ciudad que es el centro del grafo.
+    """
     min_max_dist = float('inf')
     center = None
     for node in nodes:
