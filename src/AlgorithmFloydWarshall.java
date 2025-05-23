@@ -1,4 +1,21 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos - Seccion 31
+ * Hoja de Trabajo 10
+ * Biancka Raxón 24960
+ * 
+ * Clase: AlgorithmFloydWarshall.java
+ * Clase que implementa el algoritmo de Floyd-Warshall para calcular las distancias mínimas
+ * entre todos los pares de nodos en un grafo dirigido representado por matriz de adyacencia.
+ * 
+*/
 public class AlgorithmFloydWarshall {
+    /**
+     * Calcula la matriz de distancias más cortas entre todos los pares de nodos.
+     *
+     * @param graph Grafo dirigido con matriz de adyacencia.
+     * @return Matriz de distancias mínimas entre todos los nodos.
+     */
     public static int[][] shortestPaths(Graph graph) {
         int n = graph.getSize();    // Tamaño del grafo
         int[][] distance = new int[n][n];  // Matriz de distancias minimas

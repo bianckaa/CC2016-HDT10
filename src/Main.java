@@ -1,4 +1,20 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos - Seccion 31
+ * Hoja de Trabajo 10
+ * Biancka Raxón 24960
+ * 
+ * Clase: Main.java
+ * Clase principal que crea un grafo con ciudades, calcula la matriz de caminos más cortos
+ * usando el algoritmo de Floyd-Warshall e imprime la matriz y el centro del grafo.
+ * 
+*/
 public class Main {
+    /** 
+    * Método principal.
+    * 
+    * @param args Argumentos de línea de comando
+    */
     public static void main(String[] args) {
         String[] cities = {"Ciudad de Guatemala", "Zacapa", "Chiquimula", "Quetzaltenango", "Cobán"};
         char[] letters = {'A', 'B', 'C', 'D', 'E'};
