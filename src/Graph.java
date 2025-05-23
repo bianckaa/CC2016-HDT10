@@ -76,4 +76,27 @@ public class Graph {
     public int getSize() {
         return size;
     }
+
+    /**
+     * Agrega un nuevo nodo al grafo.
+     */
+    public void addNode() {
+        int newSize = size + 1;
+        int[][] newMatrix = new int[newSize][newSize];
+
+        for (int i = 0; i < newSize; i++) {
+            for (int j = 0; j < newSize; j++) {
+                if (i < size && j < size) {
+                    newMatrix[i][j] = adjMatrix[i][j];
+                } else if (i == j) {
+                    newMatrix[i][j] = 0;
+                } else {
+                    newMatrix[i][j] = infinite;
+                }
+            }
+        }
+
+        this.size = newSize;
+        this.adjMatrix = newMatrix;
+    }
 }

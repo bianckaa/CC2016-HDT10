@@ -40,4 +40,13 @@ public class GraphTest {
             }
         }
     }
+
+    @Test
+    public void shouldIncreaseInSize() {
+        Graph graph = new Graph(2); 
+        assertEquals(2, graph.getSize());
+
+        graph.addNode(); 
+        assertEquals(3, graph.getSize()); 
+    }
 }

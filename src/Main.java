@@ -30,7 +30,8 @@ public class Main {
 
         int[][] distance = AlgorithmFloydWarshall.shortestPaths(graph);
 
-        System.out.println("Matriz de caminos más cortos:");
+
+        System.out.println("\nLa matriz de caminos más cortos es:");
         System.out.print("\t");
         for (int j = 0; j < letters.length; j++) {
             System.out.print(letters[j] + "\t");
