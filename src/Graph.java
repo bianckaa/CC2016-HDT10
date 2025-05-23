@@ -11,12 +11,27 @@ public class Graph {
             for (int j=0; j<size; j++) {
                 // Inicializar toda la matriz de adyacencia
                 if (i == j) {
-                        adjMatrix[i][j] = 0;
-                    } else {
-                        adjMatrix[i][j] = infinite;
-                    }
+                    adjMatrix[i][j] = 0;
+                } else {
+                    adjMatrix[i][j] = infinite;
                 }
             }
         }
+    }
+
+    public void addEdge(int from, int to, int weight) {
+        adjMatrix[from][to] = weight;
+    }
+
+    public void removeEdge(int from, int to) {
+        adjMatrix[from][to] = infinite;
+    }
+
+    public int[][] getAdjMatrix() {
+        return adjMatrix;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
