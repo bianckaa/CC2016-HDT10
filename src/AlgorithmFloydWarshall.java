@@ -1,5 +1,5 @@
 public class AlgorithmFloydWarshall {
-    public static int[][] ShortestPaths(Graph graph) {
+    public static int[][] shortestPaths(Graph graph) {
         int n = graph.getSize();    // Tamaño del grafo
         int[][] distance = new int[n][n];  // Matriz de distancias minimas
         int[][] original = graph.getAdjMatrix();  // Matriz original del grafo
