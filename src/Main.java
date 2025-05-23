@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         String[] cities = {"Ciudad de Guatemala", "Zacapa", "Chiquimula", "Quetzaltenango", "Cobán"};
+        char[] letters = {'A', 'B', 'C', 'D', 'E'};
 
         Graph graph = new Graph(cities.length);
         graph.addEdge(0, 1, 3);
@@ -14,7 +15,15 @@ public class Main {
         int[][] distance = AlgorithmFloydWarshall.shortestPaths(graph);
 
         System.out.println("Matriz de caminos más cortos:");
+        System.out.print("\t");
+        for (int j = 0; j < letters.length; j++) {
+            System.out.print(letters[j] + "\t");
+        }
+        System.out.println();
+
         for (int i=0; i<distance.length;i++) {
+            System.out.print(letters[i] + "\t");
+            
             for (int j=0; j<distance.length; j++) {
                 if (distance[i][j] >= Integer.MAX_VALUE / 2) {
                     System.out.print("INF\t");

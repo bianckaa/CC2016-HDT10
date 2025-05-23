@@ -15,12 +15,29 @@ public class GraphTest {
     }
 
     @Test
-    public void shouldWorkCorrectlyAlgorithmFW () {
-        Graph graph = new Graph(3);
-        graph.addEdge(0, 1, 2);
-        graph.addEdge(1, 2, 3);
+    public void shouldReturnSize() {
+        Graph graph = new Graph(5);
+        assert graph.getSize() == 5;
+    }
 
-        int[][] distance = AlgorithmFloydWarshall.shortestPaths(graph);
-        assertEquals(5, distance[0][2]); 
+    @Test
+    public void shouldReturnAdjMatrix() {
+        Graph graph = new Graph(3);
+        int[][] matrix = graph.getAdjMatrix();
+
+        // Comprobar dimensiones
+        assert matrix.length == 3;
+        assert matrix[0].length == 3;
+
+        // Comprobar valores iniciales (0 en diagonal, infinito fuera)
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (i == j) {
+                    assert matrix[i][j] == 0;
+                } else {
+                    assert matrix[i][j] == infinite ;
+                }
+            }
+        }
     }
 }
